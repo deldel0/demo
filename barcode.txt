@@ -1,0 +1,275 @@
+(Pre Test seq.1) : HDC AC Input Source Setup for Chroma61815 ---- (0'235)
+(The Report Format of this Sequence was not found)
+
+================================================================================
+(Pre Test seq.2) : Load PreSetup ---- (0'000)
+Step:   2 
+
+DC Load Set up
+================================================================================
+(Pre Test seq.3) : Dynamic Load Value PreSetup ---- (0'000)
+Step:   3 
+
+Dynamic Load Set up
+================================================================================
+STEP.1(UUT Test seq.1) : HDC_RS232 On/Off(off) ---- (0'000) ------------------------------------------------------------------------------------------------------------------------------------------- PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.2(UUT Test seq.2) : HDC_RS232 On/Off(on) ---- (0'000) -------------------------------------------------------------------------------------------------------------------------------------------- PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.3(UUT Test seq.3) : DES UUT Communication(6.1 Set I2C Pullup Voltage 3.3V@I2C Interface) ---- (0'015) -------------------------------------------------------------------------------------------- PASS
+Step:     3  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: iv3                                                            
+Number of characters to check:   1 
+Start position of string to check:   1 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  
+Lenght of response data:    2  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+================================================================================
+STEP.4(UUT Test seq.4) : DES UUT Communication(6.1 Set I2C speed to 400kHz@I2C Interface) ---- (0'016) ------------------------------------------------------------------------------------------------ PASS
+Step:     4  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .i00c                                                          
+Number of characters to check:   1 
+Start position of string to check:   1 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  
+Lenght of response data:    2  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+================================================================================
+STEP.5(UUT Test seq.5) : HDC Write SN to ATS(Write SN to ATS) ---- (5'313) ---------------------------------------------------------------------------------------------------------------------------- PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.6(UUT Test seq.6) : Static Test_61512_3Phase(AC ON) ---- (2'172) --------------------------------------------------------------------------------------------------------------------------------- PASS
+Step:    6 
+Input Phase:           0  
+Settings:
+Input  :  240.00  VAC /  50 Hz
+Output :  V1                                  409.25  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC       
+ 12Vsb                            ********       0.000   ********   VDC       
+ Ishare                           ********       0.000   ********   VDC       
+ NA                               ********       0.000   ********   VDC       
+ AC Loss                          ********       0.000   ********   VDC       
+ Ishare                           ********       0.000   ********   VDC       
+ SMBAlert                         ********       0.000   ********   VDC       
+ NA                               ********       0.000   ********   VDC       
+ Sync_Start                       ********       0.000   ********   VDC       
+================================================================================
+STEP.7(UUT Test seq.7) : Delay (ms)(===============EEPROM &MCU info test==================) ---- (5'000) ---------------------------------------------------------------------------------------------- PASS
+Step:   7 
+
+Delay     5000  ms
+================================================================================
+STEP.8(UUT Test seq.8) : DES UUT Communication(6.5 Read Firmware APPL Version SDC_CTRL (E9)) ---- (0'016) --------------------------------------------------------------------------------------------- PASS
+Step:     8  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0de9sab1rrrrrrrrlp                                         
+Number of characters to check:  12 
+Start position of string to check:   4 
+Mask Hexstring:                                           FFFFFFFF  
+Lenght of response data:   31  
+
+
+Results:   
+HexReading Expected : 01000904                                                                         
+HexReading Response : 01000904                                               
+
+            should       read
+Checksum:                        
+================================================================================
+STEP.9(UUT Test seq.9) : DES UUT Communication(6.5 Read Firmware APPL Version AC_CTRL (E9)) ---- (0'016) ---------------------------------------------------------------------------------------------- PASS
+Step:     9  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0de9sab1rrrrrrrrlp                                         
+Number of characters to check:  12 
+Start position of string to check:  16 
+Mask Hexstring:                                           FFFFFFFF  
+Lenght of response data:   31  
+
+
+Results:   
+HexReading Expected : 01002004                                                                         
+HexReading Response : 01002004                                               
+
+            should       read
+Checksum:                        
+================================================================================
+STEP.10(UUT Test seq.10) : DES UUT Communication(6.5 Read MFR_ID 0x99 with "Delta") ---- (0'031) ------------------------------------------------------------------------------------------------------ PASS
+Step:    10  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d99sab1rrrrrrlp                                           
+Number of characters to check:  18 
+Start position of string to check:   7 
+Mask Hexstring:                                       FFFFFFFFFFFF  
+Lenght of response data:   25  
+
+
+Results:   
+HexReading Expected : 61746C654405                                                                     
+HexReading Response : 61746C654405                                           
+
+            should       read
+Checksum:         A0          A0 
+================================================================================
+STEP.11(UUT Test seq.11) : DES UUT Communication(6.5 Read MFR_DELTA_PN 0x9A with "ECD18010040-B   ") ---- (0'078) ------------------------------------------------------------------------------------- PASS
+Step:    11  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d9asab1rrrrrrrrrrrrrrrrrlp                                
+Number of characters to check:  51 
+Start position of string to check:   7 
+Mask Hexstring:                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  
+Lenght of response data:   58  
+
+
+Results:   
+HexReading Expected : 202020422D303430303130383144434510                                               
+HexReading Response : 202020422D303430303130383144434510                     
+
+            should       read
+Checksum:         AB          AB 
+================================================================================
+STEP.12(UUT Test seq.12) : DES UUT Communication(6.5 Read MFR_REVISION 0x9B with "00        ") ---- (0'031) ------------------------------------------------------------------------------------------- PASS
+Step:    12  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d9bsab1rrrrrrrrrlp                                        
+Number of characters to check:  27 
+Start position of string to check:   7 
+Mask Hexstring:                                 FFFFFFFFFFFFFFFFFF  
+Lenght of response data:   34  
+
+
+Results:   
+HexReading Expected : 202020202020303008                                                               
+HexReading Response : 202020202020303008                                     
+
+            should       read
+Checksum:         B0          B0 
+================================================================================
+STEP.13(UUT Test seq.13) : DES UUT Communication(6.5 Read MFR_Date 0x9D) ---- (0'032) ----------------------------------------------------------------------------------------------------------------- PASS
+Step:    13  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d9dsab1rrrrrrrrrrrrrrrrlp                                 
+Number of characters to check:  51 
+Start position of string to check:   4 
+Mask Hexstring:                 FFFFFFFFFFFFFFFFFF0000000000000000  
+Lenght of response data:   55  
+
+
+Results:   
+HexReading Expected : 2020202020202020200000000000000000                                               
+HexReading Response : 202020202020202020363230322F323410                     
+
+            should       read
+Checksum:                        
+================================================================================
+STEP.14(UUT Test seq.14) : DES UUT Communication(6.5 Read MFR_SERIAL 0x9E-1) ---- (0'032) ------------------------------------------------------------------------------------------------------------- PASS
+Step:    14  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d9esab1rrrrrrrrrrrrrrrrrlp                                
+Number of characters to check:  54 
+Start position of string to check:   4 
+Mask Hexstring:               FFFFFFFF0000000000000000000000000000  
+Lenght of response data:   58  
+
+
+Results:   
+HexReading Expected : 202020200000000000000000000000000000                                             
+HexReading Response : 202020204642313032343632325450474411                   
+
+            should       read
+Checksum:                        
+================================================================================
+STEP.15(UUT Test seq.15) : HDC Compare data between label and PSU(6.5 Read MFR_SERIAL 0x9E-2) ---- (0'031) -------------------------------------------------------------------------------------------- PASS
+Step:  18      
+
+Full SN: DGPT2264201BF                                                
+Comapared SN(Fixed value): DGPT2                                                        
+Excepted Result:                                 1144475054323236343230314246 
+PSU internal response data:                                 1144475054323236343230314246 
+================================================================================
+STEP.16(UUT Test seq.16) : DES UUT Communication(Unlock@UUT1) ---- (0'016) ---------------------------------------------------------------------------------------------------------------------------- PASS
+Step:    16  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0db0d51d55dc7p                                             
+Number of characters to check:  12 
+Start position of string to check:   7 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    7  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         C7             
+================================================================================
+STEP.17(UUT Test seq.17) : DES UUT Communication(Send Black_Box_Clear@UUT1) ---- (0'000) -------------------------------------------------------------------------------------------------------------- PASS
+Step:    17  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dcdd02d03d55p                                             
+Number of characters to check:  12 
+Start position of string to check:   7 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    7  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+================================================================================

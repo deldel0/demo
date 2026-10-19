@@ -1,0 +1,2625 @@
+Delta Energy Systems (Thailand) PCL.
+
+Testprogram : ECD18010040-B-00-FAT-04- ATS2-2                               
+
+   
+Serial No   : A2230307130856                               
+Model Name  : ECD18010040-B          
+Operator    : root                   
+Date Process: 2026/10/19 09:25:04 AM           
+Test Time   : 00:03:04              
+Testresult  : PASS  
+
+========================================================================================================================================================================================================
+(Pre Test seq.1) : HDC AC Input Source Setup for Chroma61815 ---- (0'125)
+(The Report Format of this Sequence was not found)
+
+========================================================================================================================================================================================================
+(Pre Test seq.2) : Load PreSetup ---- (0'125)
+Step:   2 
+
+DC Load Set up
+========================================================================================================================================================================================================
+(Pre Test seq.3) : Dynamic Load Value PreSetup ---- (0'281)
+Step:   3 
+
+Dynamic Load Set up
+========================================================================================================================================================================================================
+STEP.1(UUT Test seq.1) : HDC_RS232 On/Off(off) ---- (0'000) ----------------------------------------------------------------------------------------- PASS
+(The Report Format of this Sequence was not found)
+
+========================================================================================================================================================================================================
+STEP.2(UUT Test seq.2) : HDC_RS232 On/Off(on) ---- (0'000) ------------------------------------------------------------------------------------------ PASS
+(The Report Format of this Sequence was not found)
+
+========================================================================================================================================================================================================
+STEP.3(UUT Test seq.3) : DES UUT Communication(6.1 Set I2C Pullup Voltage 3.3V@I2C Interface) ---- (0'015) ------------------------------------------ PASS
+Step:     3  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: iv3                                                            
+Number of characters to check:   1 
+Start position of string to check:   1 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  
+Lenght of response data:    2  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+========================================================================================================================================================================================================
+STEP.4(UUT Test seq.4) : DES UUT Communication(6.1 Set I2C speed to 400kHz@I2C Interface) ---- (0'016) ---------------------------------------------- PASS
+Step:     4  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .i00c                                                          
+Number of characters to check:   1 
+Start position of string to check:   1 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  
+Lenght of response data:    2  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+========================================================================================================================================================================================================
+STEP.5(UUT Test seq.5) : HDC PA&PM Preset new(Set PM 1000:1) ---- (1'234) --------------------------------------------------------------------------- PASS
+(The Report Format of this Sequence was not found)
+
+========================================================================================================================================================================================================
+STEP.6(UUT Test seq.6) : HDC I2C Relay Reset PR4(Reset All I2C relay) ---- (0'843) ------------------------------------------------------------------ PASS
+(The Report Format of this Sequence was not found)
+
+========================================================================================================================================================================================================
+STEP.7(UUT Test seq.7) : DES 6011 VDC&MUX reset(C6011 reset) ---- (0'000) --------------------------------------------------------------------------- PASS
+Step:   7 
+
+Chroma 6011 VDC& MUX Reset  
+========================================================================================================================================================================================================
+STEP.8(UUT Test seq.8) : C61512 Setup UUT(Set AC Coupling) ---- (0'031) ----------------------------------------------------------------------------- PASS
+AC/DC Coupling Setting
+
+
+========================================================================================================================================================================================================
+STEP.9(UUT Test seq.9) : Delay (ms)(=============== Cold plug in/out test ==================) ---- (0'000) ------------------------------------------ PASS
+Step:   9 
+
+Delay        0  ms
+========================================================================================================================================================================================================
+STEP.10(UUT Test seq.10) : DES DMM Measurement(5.3 Check Present before UUT1 insert) ---- (0'328) --------------------------------------------------- PASS
+Step:   10 
+
+Factor for measurement:    1.0000 
+Mux number for measurement:  1   
+Delay between readings (ms):  500 
+
+Readings:
+   Min        Reading       Max      Loops   Max Loops
+    2.400      3.370428      3.600      0         2    
+========================================================================================================================================================================================================
+STEP.11(UUT Test seq.11) : HDC Relay setting with I2C Relay for PR4(Insert UUT2&Set UUT2 PSON  low) ---- (0'985) ------------------------------------ PASS
+Step:   11       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   10        
+FR Relay setting 2:   10       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0020              
+I2C Relay2 setting 2: 0020             
+Delay Time:          0      
+
+I2C Relay3 setting 1: 0C00                    
+I2C Relay3 setting 2: 0C00                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dffddfp                         
+I2C Relay2 Read 1: >f8wdfwff
+            
+I2C Relay2 Write 2: .sa42d06dffddfp                         
+I2C Relay2 Read 2:   >f8wdfwff
+                
+
+I2C Relay3 Write 1: .sa44d06df3dffp                                               
+I2C Relay3 Read 1: >f8wffwf3
+                                  
+I2C Relay3 Write 2: .sa44d06df3dffp                                               
+I2C Relay3 Read 2: >f8wffwf3
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.12(UUT Test seq.12) : Static Test.(Set 240Vac 100%Ld) ---- (5'485) ----------------------------------------------------------------------------- PASS
+Step:   12 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********      50.997   ********   VDC     
+ 12Vsb                            ********      11.716   ********   VDC     
+ Ishare                           ********       7.023   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.000   ********   VDC     
+ Ishare                           ********       3.212   ********   VDC     
+ SMBAlert                         ********       3.240   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ Sync_Start                       ********       3.293   ********   VDC     
+ V1                               ********     354.981   ********   VDC
+ 12Vsb                            ********       0.987   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.13(UUT Test seq.13) : DES DMM Measurement(Check UUT2 V1 on) ---- (0'297) ----------------------------------------------------------------------- PASS
+Step:   13 
+
+Factor for measurement:    1.0000 
+Mux number for measurement:  1   
+Delay between readings (ms): 5000 
+
+Readings:
+   Min        Reading       Max      Loops   Max Loops
+   50.000     51.001762     55.000      0         5    
+========================================================================================================================================================================================================
+STEP.14(UUT Test seq.14) : HDC DSO Setup with I2C Relay(DSO setup for UUT1 cold plug in(V1&present)) ---- (8'891) ----------------------------------- PASS
+Step:     17      
+
+DSO Set up 
+========================================================================================================================================================================================================
+STEP.15(UUT Test seq.15) : Delay (ms)(Delay 1s) ---- (5'015) ---------------------------------------------------------------------------------------- PASS
+Step:  15 
+
+Delay     5000  ms
+========================================================================================================================================================================================================
+STEP.16(UUT Test seq.16) : HDC Relay setting with I2C Relay for PR4(Insert UUT1) ---- (0'547) ------------------------------------------------------- PASS
+Step:   16       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   10        
+FR Relay setting 2:   10       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0020              
+I2C Relay2 setting 2: 0020             
+Delay Time:          0      
+
+I2C Relay3 setting 1: 0F00                    
+I2C Relay3 setting 2: 0F00                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: .sa44d06df0dffp                                               
+I2C Relay3 Read 1: >f8wffwf0
+                                  
+I2C Relay3 Write 2: .sa44d06df0dffp                                               
+I2C Relay3 Read 2: >f8wffwf0
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.17(UUT Test seq.17) : DES DMM Measurement(5.3 Check Present after UUT1 insert) ---- (0'265) ---------------------------------------------------- PASS
+Step:   17 
+
+Factor for measurement:    1.0000 
+Mux number for measurement:  1   
+Delay between readings (ms):  500 
+
+Readings:
+   Min        Reading       Max      Loops   Max Loops
+   -0.100      0.336813      0.400      0         2    
+========================================================================================================================================================================================================
+STEP.18(UUT Test seq.18) : DES DSO single Measurement(2.11 Check V1 Undershoot@UUT1 Cold Swap Requirement) ---- (4'078) ----------------------------- PASS
+Step:  18 
+
+Measurement Type:   5 
+
+Reading
+
+  Min        Value      Max
+   46.000     51.200     54.000   
+========================================================================================================================================================================================================
+STEP.19(UUT Test seq.19) : Static Test.(AC off) ---- (1'406) ---------------------------------------------------------------------------------------- PASS
+Step:   19 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.008   ********   VDC     
+ Ishare                           ********       3.195   ********   VDC     
+ SMBAlert                         ********       3.240   ********   VDC     
+ NA                               ********       2.200   ********   VDC     
+ Sync_Start                       ********       0.010   ********   VDC     
+ V1                               ********       0.006   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.20(UUT Test seq.20) : HDC Relay setting with I2C Relay for PR4(Remove UUT2) ---- (0'969) ------------------------------------------------------- PASS
+Step:   20       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   07        
+FR Relay setting 2:   07       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0000              
+I2C Relay2 setting 2: 0000             
+Delay Time:          0      
+
+I2C Relay3 setting 1: 0700                    
+I2C Relay3 setting 2: 0700                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dffdffp                         
+I2C Relay2 Read 1: >f8wffwff
+            
+I2C Relay2 Write 2: .sa42d06dffdffp                         
+I2C Relay2 Read 2:   >f8wffwff
+                
+
+I2C Relay3 Write 1: 0000                                                          
+I2C Relay3 Read 1: 0000                                        
+I2C Relay3 Write 2: 0000                                                          
+I2C Relay3 Read 2: 0000                  
+
+I2C Relay4 Write 1£º .sa46d06dffdffp        
+I2C Relay4 Read 1:  >f8wffwff
+             
+I2C Relay4 Write 2:  .sa46d06dffdffp      
+I2C Relay4 Read 2:  >f8wffwff
+                                                             
+
+                                                 
+========================================================================================================================================================================================================
+STEP.21(UUT Test seq.21) : Static Test.(AC off) ---- (1'422) ---------------------------------------------------------------------------------------- PASS
+Step:   21 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.008   ********   VDC     
+ Ishare                           ********       3.195   ********   VDC     
+ SMBAlert                         ********       3.240   ********   VDC     
+ NA                               ********       2.200   ********   VDC     
+ Sync_Start                       ********       0.010   ********   VDC     
+ V1                               ********       0.001   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.22(UUT Test seq.22) : Delay (ms)(=============== Timing Test==================) ---- (0'000) --------------------------------------------------- PASS
+Step:  22 
+
+Delay        0  ms
+========================================================================================================================================================================================================
+STEP.23(UUT Test seq.23) : HDC Relay setting with I2C Relay for PR4(Cap Load On) ---- (1'093) ------------------------------------------------------- PASS
+Step:   23       
+
+TTL/GP Relay setting 1: 4000        
+TTL/GP Relay setting 2: 4000       
+Delay Time:          0             
+
+FR Relay setting 1:   17        
+FR Relay setting 2:   17       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0300                    
+I2C Relay3 setting 2: 0300                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dfedffp                         
+I2C Relay2 Read 1: >f8wffwfe
+            
+I2C Relay2 Write 2: .sa42d06dfedffp                         
+I2C Relay2 Read 2:   >f8wffwfe
+                
+
+I2C Relay3 Write 1: .sa44d06dfcdffp                                               
+I2C Relay3 Read 1: >f8wffwfc
+                                  
+I2C Relay3 Write 2: .sa44d06dfcdffp                                               
+I2C Relay3 Read 2: >f8wffwfc
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.24(UUT Test seq.24) : DES Turn On & Sequence DSO(2.7/4.1/4.8/4.9/4.10 Turn ON delay&Tpwok_on&Tinok_on@231Vac 100% Ld with Cap Ld(L-L 415Vac)) -- PASS
+Step:   24 
+
+Input  :  231 VAC /  50 Hz
+Output :  V1           355.00 ADC 
+Output :  12Vsb          1.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  AC Loss        0.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  SMBAlert       0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  Sync_Start     0.00 ADC 
+
+Results:
+Output              Start       Min      Reading       Max      Units
+V1                   1          1.000     927.721    5000.000   msec 
+12Vsb                1          1.000     892.310    5000.000   msec 
+Ishare               1     **********     861.258  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+AC Loss              1     **********      55.918  **********   msec 
+Ishare               1     **********  ----------  **********   msec 
+SMBAlert             1     **********  ----------  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+Sync_Start           5     **********       1.219  **********   msec 
+
+Td time            **********     927.721  **********    msec
+Td time            **********     892.310  **********    msec
+Td time            **********     861.258  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********      55.918  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********       1.219  **********    msec
+Tdl time           **********     927.721  **********    msec
+Tds time           **********       1.219  **********    msec
+
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+
+========================================================================================================================================================================================================
+STEP.25(UUT Test seq.25) : DES Turn On & Sequence DSO(2.7/2.8/4.1/4.8/4.9/4.10 Turn ON delay&Tpwok_on&Tinok_on&Tvsb_vout_delay@305Vac min Ld with Cap PASS
+Step:   25 
+
+Input  :  305 VAC /  63 Hz
+Output :  V1             0.00 ADC 
+Output :  12Vsb          0.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  AC Loss        0.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  SMBAlert       0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  Sync_Start     0.00 ADC 
+
+Results:
+Output              Start       Min      Reading       Max      Units
+V1                   1          1.000     905.452    5000.000   msec 
+12Vsb                1          1.000     880.772    5000.000   msec 
+Ishare               1     **********  ----------  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+AC Loss              1     **********      53.076  **********   msec 
+Ishare               1     **********  ----------  **********   msec 
+SMBAlert             1     **********  ----------  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+Sync_Start           5     **********       1.204  **********   msec 
+
+Td time            **********     905.452  **********    msec
+Td time            **********     880.772  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********      53.076  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********       1.204  **********    msec
+Tdl time           **********     905.452  **********    msec
+Tds time           **********       1.204  **********    msec
+
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+
+========================================================================================================================================================================================================
+STEP.26(UUT Test seq.26) : Static Test.(AC off) ---- (2'437) ---------------------------------------------------------------------------------------- PASS
+Step:   26 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  177.50  ADC 
+Output :  12Vsb                                 0.50  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.007   ********   VDC     
+ Ishare                           ********       3.194   ********   VDC     
+ SMBAlert                         ********       3.238   ********   VDC     
+ NA                               ********       2.205   ********   VDC     
+ Sync_Start                       ********       0.014   ********   VDC     
+ V1                               ********       0.010   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.27(UUT Test seq.27) : HDC Relay setting with I2C Relay for PR4(Cap Load Off&Sync_start short to GND) ---- (1'062) ------------------------------ PASS
+Step:   27       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   17        
+FR Relay setting 2:   17       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 2300                    
+I2C Relay3 setting 2: 2300                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dfedffp                         
+I2C Relay2 Read 1: >f8wffwfe
+            
+I2C Relay2 Write 2: .sa42d06dfedffp                         
+I2C Relay2 Read 2:   >f8wffwfe
+                
+
+I2C Relay3 Write 1: .sa44d06ddcdffp                                               
+I2C Relay3 Read 1: >f8wffwdc
+                                  
+I2C Relay3 Write 2: .sa44d06ddcdffp                                               
+I2C Relay3 Read 2: >f8wffwdc
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.28(UUT Test seq.28) : DES Turn On & Sequence DSO(2.7/4.1/4.8/4.9/4.10 Turn ON delay@231Vac 100% Ld without Cap Ld Sync_start short to GND) ----  PASS
+Step:   28 
+
+Input  :  231 VAC /  50 Hz
+Output :  V1           355.00 ADC 
+Output :  12Vsb          1.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  AC Loss        0.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  SMBAlert       0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  Sync_Start     0.00 ADC 
+
+Results:
+Output              Start       Min      Reading       Max      Units
+V1                   1       5500.000    8923.998   10000.000   msec 
+12Vsb                1          1.000     886.591    5000.000   msec 
+Ishare               1     **********    8857.546  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+AC Loss              1     **********      52.469  **********   msec 
+Ishare               1     **********  ----------  **********   msec 
+SMBAlert             1     **********  ----------  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+Sync_Start           5     **********  ----------  **********   msec 
+
+Td time            **********    8923.998  **********    msec
+Td time            **********     886.591  **********    msec
+Td time            **********    8857.546  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********      52.469  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Tdl time           **********    8923.998  **********    msec
+Tds time           **********      52.469  **********    msec
+
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+
+========================================================================================================================================================================================================
+STEP.29(UUT Test seq.29) : HDC Relay setting with I2C Relay for PR4(Set Cap Load On) ---- (1'078) --------------------------------------------------- PASS
+Step:   29       
+
+TTL/GP Relay setting 1: 4000        
+TTL/GP Relay setting 2: 4000       
+Delay Time:          0             
+
+FR Relay setting 1:   17        
+FR Relay setting 2:   17       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0300                    
+I2C Relay3 setting 2: 0300                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dfedffp                         
+I2C Relay2 Read 1: >f8wffwfe
+            
+I2C Relay2 Write 2: .sa42d06dfedffp                         
+I2C Relay2 Read 2:   >f8wffwfe
+                
+
+I2C Relay3 Write 1: .sa44d06dfcdffp                                               
+I2C Relay3 Read 1: >f8wffwfc
+                                  
+I2C Relay3 Write 2: .sa44d06dfcdffp                                               
+I2C Relay3 Read 2: >f8wffwfc
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.30(UUT Test seq.30) : DES Turn On & Sequence DSO(2.7/4.2  Rise time@231Vac 100%Ld with cap load(L-L 415Vac)) ---- (7'453) ---------------------- PASS
+Step:   30 
+
+Input  :  231 VAC /  50 Hz
+Output :  V1           355.00 ADC 
+Output :  12Vsb          1.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  AC Loss        0.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  SMBAlert       0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  Sync_Start     0.00 ADC 
+
+Results:
+Output              Start       Min      Reading       Max      Units
+V1                   5         10.000      58.906      66.000   msec 
+12Vsb                5         10.000      28.972     100.000   msec 
+Ishare               5     **********       0.738  **********   msec 
+NA                   5     **********  ----------  **********   msec 
+AC Loss              5     **********       4.015  **********   msec 
+Ishare               5     **********  ----------  **********   msec 
+SMBAlert             5     **********  ----------  **********   msec 
+NA                   1     **********  ----------  **********   msec 
+Sync_Start           5     **********  ----------  **********   msec 
+
+Td time            **********      58.906  **********    msec
+Td time            **********      28.972  **********    msec
+Td time            **********       0.738  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********       4.015  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Td time            **********  ----------  **********    msec
+Tdl time           **********      58.906  **********    msec
+Tds time           **********       0.738  **********    msec
+
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+Reference Load:                                                                                                                                                                                                        0 
+
+========================================================================================================================================================================================================
+STEP.31(UUT Test seq.31) : DES UUT Communication(Clear Fault) ---- (0'016) -------------------------------------------------------------------------- PASS
+Step:    31  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d03d46p                                                   
+Number of characters to check:   3 
+Start position of string to check:   1 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         46             
+========================================================================================================================================================================================================
+STEP.32(UUT Test seq.32) : HDC Relay setting with I2C Relay for PR4(Set PSKill High) ---- (0'109) --------------------------------------------------- PASS
+Step:   32       
+
+TTL/GP Relay setting 1: 4000        
+TTL/GP Relay setting 2: 4000       
+Delay Time:          0             
+
+FR Relay setting 1:   07        
+FR Relay setting 2:   07       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0700                    
+I2C Relay3 setting 2: 0700                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: 0000                                                          
+I2C Relay3 Read 1: 0000                                        
+I2C Relay3 Write 2: 0000                                                          
+I2C Relay3 Read 2: 0000                  
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.33(UUT Test seq.33) : Static Test.(5.6/5.1/5.2/5.4 Check output@PSK High) ---- (0'782) --------------------------------------------------------- PASS
+Step:   33 
+
+Settings:
+Input:     231.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 -0.100       0.000      1.000   VDC     
+ 12Vsb                              -0.100       0.000      0.400   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                             1.800       3.052      3.600   VDC     
+ Ishare                           ********       3.198   ********   VDC     
+ SMBAlert                            2.400       3.240      3.600   VDC     
+ NA                               ********       2.213   ********   VDC     
+ Sync_Start                       ********       0.014   ********   VDC     
+ V1                               ********       0.012   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.34(UUT Test seq.34) : DES DMM Measurement(5.3 Check Sync_Start@PSK High) ---- (0'297) ---------------------------------------------------------- PASS
+Step:   34 
+
+Factor for measurement:    1.0000 
+Mux number for measurement:  9   
+Delay between readings (ms):  500 
+
+Readings:
+   Min        Reading       Max      Loops   Max Loops
+   -0.100      0.012793      0.400      0         2    
+========================================================================================================================================================================================================
+STEP.35(UUT Test seq.35) : HDC Relay setting with I2C Relay for PR4(Set PSKill Low) ---- (0'109) ---------------------------------------------------- PASS
+Step:   35       
+
+TTL/GP Relay setting 1: 4000        
+TTL/GP Relay setting 2: 4000       
+Delay Time:          0             
+
+FR Relay setting 1:   17        
+FR Relay setting 2:   17       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0700                    
+I2C Relay3 setting 2: 0700                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: 0000                                                          
+I2C Relay3 Read 1: 0000                                        
+I2C Relay3 Write 2: 0000                                                          
+I2C Relay3 Read 2: 0000                  
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.36(UUT Test seq.36) : Static Test.(5.6/5.1/5.2/5.4  Check output@PSK Low) ---- (2'125) --------------------------------------------------------- PASS
+Step:   36 
+
+Settings:
+Input:     231.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 51.480      51.688     52.520   VDC     
+ 12Vsb                              11.400      11.534     12.600   VDC     
+ Ishare                           ********       6.874   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                             1.800       2.618      3.600   VDC     
+ Ishare                           ********       3.167   ********   VDC     
+ SMBAlert                            2.400       3.223      3.600   VDC     
+ NA                               ********       1.900   ********   VDC     
+ Sync_Start                       ********       3.313   ********   VDC     
+ V1                               ********     354.980   ********   VDC
+ 12Vsb                            ********       0.987   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.37(UUT Test seq.37) : HDC Relay setting with I2C Relay for PR4(Cap Load Off) ---- (1'093) ------------------------------------------------------ PASS
+Step:   37       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   17        
+FR Relay setting 2:   17       
+Delay Time:          0 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0700                    
+I2C Relay3 setting 2: 0700                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dfedffp                         
+I2C Relay2 Read 1: >f8wffwfe
+            
+I2C Relay2 Write 2: .sa42d06dfedffp                         
+I2C Relay2 Read 2:   >f8wffwfe
+                
+
+I2C Relay3 Write 1: 0000                                                          
+I2C Relay3 Read 1: 0000                                        
+I2C Relay3 Write 2: 0000                                                          
+I2C Relay3 Read 2: 0000                  
+
+I2C Relay4 Write 1£º .sa46d06dffdffp        
+I2C Relay4 Read 1:  >f8wffwff
+             
+I2C Relay4 Write 2:  .sa46d06dffdffp      
+I2C Relay4 Read 2:  >f8wffwff
+                                                             
+
+                                                 
+========================================================================================================================================================================================================
+STEP.38(UUT Test seq.38) : DES Hold Up & Sequence DSO_61512_3Phases(4.3/4.11/4.12/4.13 Holdup time@231V 100% Ld) ---- (7'500) ----------------------- PASS
+Step:   38 
+
+Input  :  231 VAC /  50 Hz
+Output :  V1           355.00 ADC 
+Output :  12Vsb          1.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  AC Loss        0.00 ADC 
+Output :  Ishare         0.00 ADC 
+Output :  SMBAlert       0.00 ADC 
+Output :  NA             0.00 ADC 
+Output :  Sync_Start     0.00 ADC 
+
+Results:
+Output      Start       Min      Reading       Max      Units
+V1            8        20.000      23.800    ********    msec 
+12Vsb         8        70.000      98.586    ********    msec 
+Ishare        8      ********      33.278    ********    msec 
+NA            8      ********    --------    ********    msec 
+AC Loss       8      ********       4.563       5.000    msec 
+Ishare        5      ********    --------    ********    msec 
+SMBAlert      5      ********    --------    ********    msec 
+NA            5      ********    --------    ********    msec 
+Sync_Start    5      ********    --------    ********    msec 
+
+Td time              ********      23.800    ********   msec
+Td time              ********      98.586    ********   msec
+Td time              ********      33.278    ********   msec
+Td time              ********    --------    ********   msec
+Td time              ********       4.563    ********   msec
+Td time              ********    --------    ********   msec
+Td time              ********    --------    ********   msec
+Td time              ********    --------    ********   msec
+Td time              ********    --------    ********   msec
+Tdl time             ********      98.586    ********   msec
+Tds time             ********       4.563    ********   msec
+
+========================================================================================================================================================================================================
+STEP.39(UUT Test seq.39) : Overshoot Voltage Test_2(2.9 Turn-on Overshoot V1 no Load) ---- (6'875) -------------------------------------------------- PASS
+Step:    39 
+ 
+Input  :    305  VAC /   50  Hz
+Output : V1                         0 ADC 
+Output : 12Vsb                      0 ADC 
+Output : Ishare                     0 ADC 
+Output : NA                         0 ADC 
+Output : AC Loss                    0 ADC 
+Output : Ishare                     0 ADC 
+Output : SMBAlert                   0 ADC 
+Output : NA                         0 ADC 
+Output : Sync_Start                 0 ADC 
+
+Overshoot less than   56.16  PASS     
+Overshoot less than   12.60  PASS     
+Overshoot less than  ******  PASS     
+Overshoot less than  ******  PASS     
+Overshoot less than  ******  PASS     
+Overshoot less than  ******  PASS     
+Overshoot less than  ******  PASS     
+Overshoot less than  ******  PASS     
+Overshoot less than  ******  PASS     
+========================================================================================================================================================================================================
+STEP.40(UUT Test seq.40) : Static Test.(Set 240Vac 10% Ld) ---- (0'531) ----------------------------------------------------------------------------- PASS
+Step:   40 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********      54.036   ********   VDC     
+ 12Vsb                            ********      12.079   ********   VDC     
+ Ishare                           ********       0.671   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       3.004   ********   VDC     
+ Ishare                           ********       3.200   ********   VDC     
+ SMBAlert                         ********       3.230   ********   VDC     
+ NA                               ********       2.173   ********   VDC     
+ Sync_Start                       ********       3.297   ********   VDC     
+ V1                               ********      35.480   ********   VDC
+ 12Vsb                            ********       0.089   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.41(UUT Test seq.41) : DES UUT Communication(Clear Fault) ---- (0'015) -------------------------------------------------------------------------- PASS
+Step:    41  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d03d46p                                                   
+Number of characters to check:   3 
+Start position of string to check:   1 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         46             
+========================================================================================================================================================================================================
+STEP.42(UUT Test seq.42) : DES UUT Communication(Unlock Adjustment) ---- (0'016) -------------------------------------------------------------------- PASS
+Step:    42  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dc8d55d4cdeap                                             
+Number of characters to check:   3 
+Start position of string to check:   4 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         EA             
+========================================================================================================================================================================================================
+STEP.43(UUT Test seq.43) : HDC OVP Test with I2C(3.2 V1 OVP Test@240Vac 10%Ld(L-L 415Vac)) ---- (5'500) --------------------------------------------- PASS
+Step:   43 
+
+Poti Address:  b0         
+Write Byte/Word:   2    (1=Byte,2=Word)  
+Start Poti Value:   4340   Dec
+End Poti Value  :   5120   Dec
+Step Value      :  10      Dec        
+Final AD Write  : 0        DEC        
+ 
+Results:  OVP/UVP Working                                               
+
+             Min     Reading     Max     Units
+OVP Trip      58.50     59.19     59.90   VDC   
+
+========================================================================================================================================================================================================
+STEP.44(UUT Test seq.44) : DES UUT Communication(lock Adjustment) ---- (0'015) ---------------------------------------------------------------------- PASS
+Step:    44  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dc8daadaad81p                                             
+Number of characters to check:   3 
+Start position of string to check:   4 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         81             
+========================================================================================================================================================================================================
+STEP.45(UUT Test seq.45) : DES UUT Communication(6.5 READ STATUS_Word 0x79 P0@V1 OVP) ---- (0'016) -------------------------------------------------- PASS
+Step:    45  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d79sab1rrlp                                               
+Number of characters to check:   6 
+Start position of string to check:   7 
+Mask Hexstring:                                               FFFF  
+Lenght of response data:   13  
+
+
+Results:   
+HexReading Expected : 8860                                                                             
+HexReading Response : 8860                                                   
+
+            should       read
+Checksum:         90          90 
+========================================================================================================================================================================================================
+STEP.46(UUT Test seq.46) : DES UUT Communication(6.5 READ STATUS_VOUT 0x7A P0@V1 OVP) ---- (0'000) -------------------------------------------------- PASS
+Step:    46  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7asab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 FF  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : C0                                                                               
+HexReading Response : C0                                                     
+
+            should       read
+Checksum:         6C          6C 
+========================================================================================================================================================================================================
+STEP.47(UUT Test seq.47) : Static Test.(3.2/5.1/5.2/5.4 Check output@V1 OVP) ---- (0'500) ----------------------------------------------------------- PASS
+Step:   47 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 -0.100       0.000      1.000   VDC     
+ 12Vsb                              10.500      12.123     12.600   VDC     
+ Ishare                           ********       0.020   ********   VDC     
+ NA                               ********       0.004   ********   VDC     
+ AC Loss                             1.800       3.047      3.600   VDC     
+ Ishare                           ********       3.196   ********   VDC     
+ SMBAlert                            2.400       3.237      3.600   VDC     
+ NA                               ********       2.198   ********   VDC     
+ Sync_Start                       ********       0.009   ********   VDC     
+ V1                               ********       0.048   ********   VDC
+ 12Vsb                            ********       0.088   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.48(UUT Test seq.48) : DES DMM Measurement(5.3 Check Sync_Start@V1 OVP) ---- (0'156) ------------------------------------------------------------ PASS
+Step:   48 
+
+Factor for measurement:    1.0000 
+Mux number for measurement:  9   
+Delay between readings (ms):  500 
+
+Readings:
+   Min        Reading       Max      Loops   Max Loops
+   -0.100      0.007821      0.400      0         2    
+========================================================================================================================================================================================================
+STEP.49(UUT Test seq.49) : HDC Relay setting with I2C Relay for PR4(7.23 Set fault reset Reset@V1 OVP) ---- (1'313) --------------------------------- PASS
+Step:   49       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   07        
+FR Relay setting 2:   17       
+Delay Time:       1200 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0700                    
+I2C Relay3 setting 2: 0700                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: 0000                                                          
+I2C Relay3 Read 1: 0000                                        
+I2C Relay3 Write 2: 0000                                                          
+I2C Relay3 Read 2: 0000                  
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.50(UUT Test seq.50) : Static Test.(3.2/5.1/5.2/5.4 Check output@V1 OVP Recover) ---- (2'125) --------------------------------------------------- PASS
+Step:   50 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 51.480      54.032     54.540   VDC     
+ 12Vsb                              11.400      12.079     12.600   VDC     
+ Ishare                           ********       0.686   ********   VDC     
+ NA                               ********       0.005   ********   VDC     
+ AC Loss                             1.800       3.004      3.600   VDC     
+ Ishare                           ********       3.198   ********   VDC     
+ SMBAlert                            2.400       3.230      3.600   VDC     
+ NA                               ********       2.174   ********   VDC     
+ Sync_Start                       ********       3.296   ********   VDC     
+ V1                               ********      35.481   ********   VDC
+ 12Vsb                            ********       0.088   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.51(UUT Test seq.51) : DES DMM Measurement(5.3 Check Sync_Start@V1 OVP after  fault reset) ---- (0'234) ----------------------------------------- PASS
+Step:   51 
+
+Factor for measurement:    1.0000 
+Mux number for measurement:  9   
+Delay between readings (ms):  500 
+
+Readings:
+   Min        Reading       Max      Loops   Max Loops
+    2.400      3.289979      3.600      0         2    
+========================================================================================================================================================================================================
+STEP.52(UUT Test seq.52) : DES UUT Communication(Clear Fault) ---- (0'000) -------------------------------------------------------------------------- PASS
+Step:    52  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d03d46p                                                   
+Number of characters to check:   3 
+Start position of string to check:   1 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         46             
+========================================================================================================================================================================================================
+STEP.53(UUT Test seq.53) : DES UUT Communication(6.5 READ STATUS_Word 0x79 P0@V1 OVP after  fault reset Reset clrear fault) ---- (0'016) ------------ PASS
+Step:    53  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d79sab1rrlp                                               
+Number of characters to check:   6 
+Start position of string to check:   7 
+Mask Hexstring:                                               FFFF  
+Lenght of response data:   13  
+
+
+Results:   
+HexReading Expected : 0000                                                                             
+HexReading Response : 0000                                                   
+
+            should       read
+Checksum:         D4          D4 
+========================================================================================================================================================================================================
+STEP.54(UUT Test seq.54) : DES UUT Communication(6.5 READ STATUS_VOUT 0x7A P0@V1 OVP after  fault reset Reset clrear fault) ---- (0'016) ------------ PASS
+Step:    54  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7asab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 FF  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : 00                                                                               
+HexReading Response : 00                                                     
+
+            should       read
+Checksum:         22          22 
+========================================================================================================================================================================================================
+STEP.55(UUT Test seq.55) : DES UUT Communication(Unlock Adjustment) ---- (0'015) -------------------------------------------------------------------- PASS
+Step:    55  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dc8d55d4cdeap                                             
+Number of characters to check:   3 
+Start position of string to check:   4 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         EA             
+========================================================================================================================================================================================================
+STEP.56(UUT Test seq.56) : HDC OVP Test with I2C(3.2 12Vsb OVP Test@240Vac 10% Ld(L-L 415Vac)) ---- (6'375) ----------------------------------------- PASS
+Step:   56 
+
+Poti Address:  b0         
+Write Byte/Word:   2    (1=Byte,2=Word)  
+Start Poti Value:   3520   Dec
+End Poti Value  :   4050   Dec
+Step Value      :  10      Dec        
+Final AD Write  : 0        DEC        
+ 
+Results:  OVP/UVP Working                                               
+
+             Min     Reading     Max     Units
+OVP Trip      12.90     13.27     14.50   VDC   
+
+========================================================================================================================================================================================================
+STEP.57(UUT Test seq.57) : DES UUT Communication(lock Adjustment) ---- (0'015) ---------------------------------------------------------------------- PASS
+Step:    57  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dc8daadaad81p                                             
+Number of characters to check:   3 
+Start position of string to check:   4 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         81             
+========================================================================================================================================================================================================
+STEP.58(UUT Test seq.58) : DES UUT Communication(6.5 READ STATUS_Word 0xC3@12Vsb OVP) ---- (0'016) -------------------------------------------------- PASS
+Step:    58  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dc3sab1rrlp                                               
+Number of characters to check:   6 
+Start position of string to check:   7 
+Mask Hexstring:                                               FFFF  
+Lenght of response data:   13  
+
+
+Results:   
+HexReading Expected : 0020                                                                             
+HexReading Response : 0020                                                   
+
+            should       read
+Checksum:         7E          7E 
+========================================================================================================================================================================================================
+STEP.59(UUT Test seq.59) : DES UUT Communication(6.5 READ STATUS_VOUT 0xC4@12Vsb OVP) ---- (0'015) -------------------------------------------------- PASS
+Step:    59  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dc4sab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 FF  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : C0                                                                               
+HexReading Response : C0                                                     
+
+            should       read
+Checksum:         AA          AA 
+========================================================================================================================================================================================================
+STEP.60(UUT Test seq.60) : Static Test.(3.2/5.1/5.2/5.4 Check output@12Vsb OVP ) ---- (0'703) ------------------------------------------------------- PASS
+Step:   60 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 53.262      54.062     54.338   VDC     
+ 12Vsb                            ********       0.000      0.400   VDC     
+ Ishare                           ********       0.678   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                             1.800       3.007      3.600   VDC     
+ Ishare                           ********       3.199   ********   VDC     
+ SMBAlert                            2.400       3.230      3.600   VDC     
+ NA                               ********       2.180   ********   VDC     
+ Sync_Start                       ********       3.296   ********   VDC     
+ V1                               ********      35.481   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.61(UUT Test seq.61) : DES UUT Communication(PSU operation Off) ---- (0'016) -------------------------------------------------------------------- PASS
+Step:    61  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d01d00dffp                                                
+Number of characters to check:   3 
+Start position of string to check:   4 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         FF             
+========================================================================================================================================================================================================
+STEP.62(UUT Test seq.62) : Delay (ms)(Delay 100ms) ---- (0'093) ------------------------------------------------------------------------------------- PASS
+Step:  62 
+
+Delay      100  ms
+========================================================================================================================================================================================================
+STEP.63(UUT Test seq.63) : DES UUT Communication(PSU operation On) ---- (0'015) --------------------------------------------------------------------- PASS
+Step:    63  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d01d80d76p                                                
+Number of characters to check:   3 
+Start position of string to check:   4 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         76             
+========================================================================================================================================================================================================
+STEP.64(UUT Test seq.64) : Static Test.(3.2/5.1/5.2/5.4 Check output@12Vsb OVP after operation off&on) ---- (0'797) --------------------------------- PASS
+Step:   64 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 53.262      54.024     54.338   VDC     
+ 12Vsb                              11.400      12.079     12.600   VDC     
+ Ishare                           ********       0.682   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                             1.800       3.002      3.600   VDC     
+ Ishare                           ********       3.199   ********   VDC     
+ SMBAlert                            2.400       3.229      3.600   VDC     
+ NA                               ********       2.170   ********   VDC     
+ Sync_Start                       ********       3.297   ********   VDC     
+ V1                               ********      35.481   ********   VDC
+ 12Vsb                            ********       0.088   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.65(UUT Test seq.65) : Static Test.(Set 167Vac 10% Ld) ---- (1'438) ----------------------------------------------------------------------------- PASS
+Step:   65 
+
+Settings:
+Input:     167.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********      54.035   ********   VDC     
+ 12Vsb                            ********      12.079   ********   VDC     
+ Ishare                           ********       0.679   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.000   ********   VDC     
+ Ishare                           ********       3.198   ********   VDC     
+ SMBAlert                         ********       3.230   ********   VDC     
+ NA                               ********       2.178   ********   VDC     
+ Sync_Start                       ********       3.298   ********   VDC     
+ V1                               ********      35.481   ********   VDC
+ 12Vsb                            ********       0.089   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.66(UUT Test seq.66) : DES Sensor Reading(3.4 READ_VIN@167Vac 10%Ld) ---- (2'234) --------------------------------------------------------------- PASS
+Step:  66 
+
+Reading Command: .sab0d88sab1rrlp                                              
+Calculationfactor for readback:    1.0000  
+
+Hex Reading:  F29D       
+                     Min        Reading        Max
+External Reading  **********     166.940    **********    
+Internal Reading  **********     167.250    **********    
+Absolute Delta    **********      -0.310    **********   
+Percentage Delta      -5.000      -0.186         5.000   
+========================================================================================================================================================================================================
+STEP.67(UUT Test seq.67) : Static Test.(Set 326Vac 10% Ld) ---- (1'469) ----------------------------------------------------------------------------- PASS
+Step:   67 
+
+Settings:
+Input:     326.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                   35.50  ADC 
+Output :  12Vsb                                 0.10  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.007   ********   VDC     
+ Ishare                           ********       3.195   ********   VDC     
+ SMBAlert                         ********       3.239   ********   VDC     
+ NA                               ********       2.207   ********   VDC     
+ Sync_Start                       ********       0.014   ********   VDC     
+ V1                               ********       0.029   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.68(UUT Test seq.68) : DES Sensor Reading(3.4 READ_VIN@326Vac 10%Ld) ---- (2'047) --------------------------------------------------------------- PASS
+Step:  68 
+
+Reading Command: .sab0d88sab1rrlp                                              
+Calculationfactor for readback:    1.0000  
+
+Hex Reading:  FA8D       
+                     Min        Reading        Max
+External Reading  **********     326.130    **********    
+Internal Reading  **********     326.500    **********    
+Absolute Delta    **********      -0.370    **********   
+Percentage Delta      -5.000      -0.113         5.000   
+========================================================================================================================================================================================================
+STEP.69(UUT Test seq.69) : DES UUT Communication(Clear Fault) ---- (0'015) -------------------------------------------------------------------------- PASS
+Step:    69  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d03d46p                                                   
+Number of characters to check:   3 
+Start position of string to check:   1 
+Mask Hexstring:                                                 FF  
+Lenght of response data:    4  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         46             
+========================================================================================================================================================================================================
+STEP.70(UUT Test seq.70) : Static Test.(AC Off) ---- (0'938) ---------------------------------------------------------------------------------------- PASS
+Step:   70 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.007   ********   VDC     
+ Ishare                           ********       3.196   ********   VDC     
+ SMBAlert                         ********       3.239   ********   VDC     
+ NA                               ********       2.205   ********   VDC     
+ Sync_Start                       ********       0.014   ********   VDC     
+ V1                               ********       0.001   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.71(UUT Test seq.71) : Delay (ms)(==============Parallel Test===========) ---- (0'000) ---------------------------------------------------------- PASS
+Step:  71 
+
+Delay   ******  ms
+========================================================================================================================================================================================================
+STEP.72(UUT Test seq.72) : C61512 Setup UUT(Set AC Coupling) ---- (0'078) --------------------------------------------------------------------------- PASS
+AC/DC Coupling Setting
+
+
+========================================================================================================================================================================================================
+STEP.73(UUT Test seq.73) : HDC Relay setting with I2C Relay for PR4(Insert UUT2&Set UUT1&2 PSkill Low, Connect V1 remote sense to bus) ---- (1'188) - PASS
+Step:   73       
+
+TTL/GP Relay setting 1: 8000        
+TTL/GP Relay setting 2: 8000       
+Delay Time:          0             
+
+FR Relay setting 1:   1F        
+FR Relay setting 2:   1F       
+Delay Time:        100 
+
+I2C Relay2 setting 1: 0120              
+I2C Relay2 setting 2: 0120             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0F00                    
+I2C Relay3 setting 2: 0F00                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: .sa42d06dfeddfp                         
+I2C Relay2 Read 1: >f8wdfwfe
+            
+I2C Relay2 Write 2: .sa42d06dfeddfp                         
+I2C Relay2 Read 2:   >f8wdfwfe
+                
+
+I2C Relay3 Write 1: .sa44d06df0dffp                                               
+I2C Relay3 Read 1: >f8wffwf0
+                                  
+I2C Relay3 Write 2: .sa44d06df0dffp                                               
+I2C Relay3 Read 2: >f8wffwf0
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.74(UUT Test seq.74) : Static Test.(Set 240Vac 100%Ld) ---- (2'656) ----------------------------------------------------------------------------- PASS
+Step:   74 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 52.470      52.969     53.530   VDC     
+ 12Vsb                              11.400      11.967     12.600   VDC     
+ Ishare                           ********       3.536   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                             1.800       2.974      3.600   VDC     
+ Ishare                           ********       3.204   ********   VDC     
+ SMBAlert                            2.400       3.227      3.600   VDC     
+ NA                               ********       2.159   ********   VDC     
+ Sync_Start                       ********       3.289   ********   VDC     
+ V1                               ********     354.981   ********   VDC
+ 12Vsb                            ********       0.987   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.75(UUT Test seq.75) : DES UUT Communication(6.5 READ STATUS_Word 0x79  UUT1@Parallel test) ---- (0'016) ---------------------------------------- PASS
+Step:    75  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d79sab1rrlp                                               
+Number of characters to check:   6 
+Start position of string to check:   7 
+Mask Hexstring:                                               0FF0  
+Lenght of response data:   13  
+
+
+Results:   
+HexReading Expected : 0000                                                                             
+HexReading Response : 2008                                                   
+
+            should       read
+Checksum:         9C          9C 
+========================================================================================================================================================================================================
+STEP.76(UUT Test seq.76) : DES UUT Communication(6.5 READ STATUS_Word 0x79  UUT2@Parallel test) ---- (0'016) ---------------------------------------- PASS
+Step:    76  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sabed79sabfrrlp                                               
+Number of characters to check:   6 
+Start position of string to check:   7 
+Mask Hexstring:                                               0FF0  
+Lenght of response data:   13  
+
+
+Results:   
+HexReading Expected : 0000                                                                             
+HexReading Response : 200A                                                   
+
+            should       read
+Checksum:         C8          C8 
+========================================================================================================================================================================================================
+STEP.77(UUT Test seq.77) : HDC Static Current Share for I2C(2.15 Current Sharing Test@100%Ld HL by internal PMBUS reading) ---- (1'297) ------------- PASS
+Step:   80              
+
+Conditions:
+Output
+V1                     355.000 A
+12Vsb                    1.000 A
+Ishare                   0.000 A
+NA                       0.000 A
+AC Loss                  0.000 A
+Ishare                   0.000 A
+SMBAlert                 0.000 A
+NA                       0.000 A
+Sync_Start               0.000 A
+
+Results:                               Min      Reading    Max                         
+Voltage  V1                            ********  52.9713  ********   V                                           
+Voltage  12Vsb                         ********  11.9688  ********   V                                           
+Voltage  Ishare                        ********   3.5325  ********   V                                           
+Voltage  NA                            ********   0.0000  ********   V                                           
+Voltage  AC Loss                       ********   2.9767  ********   V                                           
+Voltage  Ishare                        ********   3.2015  ********   V                                           
+Voltage  SMBAlert                      ********   3.2260  ********   V                                           
+Voltage  NA                            ********   2.1510  ********   V                                           
+Voltage  Sync_Start                    ********   3.2898  ********   V                                           
+CS Volt  V1                            ********   0.0000  ********   V    
+CS Volt  12Vsb                         ********   0.0000  ********   V    
+CS Volt  Ishare                        ********   0.0000  ********   V    
+CS Volt  NA                            ********   0.0000  ********   V    
+CS Volt  AC Loss                       ********   0.0000  ********   V    
+CS Volt  Ishare                        ********   0.0000  ********   V    
+CS Volt  SMBAlert                      ********   0.0000  ********   V    
+CS Volt  NA                            ********   0.0000  ********   V    
+CS Volt  Sync_Start                    ********   0.0000  ********   V    
+Current  V1                            ********  354.981  ********   A
+Current  12Vsb                         ********    0.987  ********   A
+Current  Ishare                        ********    0.000  ********   A
+Current  NA                            ********    0.000  ********   A
+Current  AC Loss                       ********    0.000  ********   A
+Current  Ishare                        ********    0.000  ********   A
+Current  SMBAlert                      ********    0.000  ********   A
+Current  NA                            ********    0.000  ********   A
+Current  Sync_Start                    ********    0.000  ********   A
+Current PSU1-Vout1                     ********  178.750  ********   A 
+Current PSU1-Vout2                     ********  999.000  ********   A
+Current PSU1-Vout3                     ********  999.000  ********   A
+Current PSU2-Vout1                     ********  176.500  ********   A 
+Current PSU2-Vout2                     ********  999.000  ********   A
+Current PSU2-Vout3                     ********  999.000  ********   A
+PSU1 Vout1 VS PSU1 and PSU2 Vout1        -2.000    0.633    2.000   %
+PSU1 Vout2 VS PSU1 and PSU2 Vout2      ********  999.000 ********   %
+PSU1 Vout3 VS PSU1 and PSU2 Vout3      ********  999.000 ********   %
+PSU2 Vout1 VS PSU1 and PSU2 Vout1        -2.000    0.633    2.000   %
+PSU2 Vout2 VS PSU1 and PSU2 Vout2      ********  999.000  ********   %
+PSU2 Vout3 VS PSU1 and PSU2 Vout3      ********  999.000  ********   % 
+    
+PSU1 Readback Current-Vout1(Hex string) F2CB                                 
+PSU1 Readback Current-Vout2(Hex string) 0                                     
+PSU1 Readback Current-Vout3(Hex string) 0                                     
+PSU2 Readback Current-Vout1(Hex string) F2C2                                
+PSU2 Readback Current-Vout2(Hex string) 0                                    
+PSU2 Readback Current-Vout3(Hex string) 0              
+========================================================================================================================================================================================================
+STEP.78(UUT Test seq.78) : HDC Static Current Share for I2C(2.15 Current Sharing Test@50%Ld HL by internal PMBUS reading) ---- (1'313) -------------- PASS
+Step:   81              
+
+Conditions:
+Output
+V1                     177.500 A
+12Vsb                    0.500 A
+Ishare                   0.000 A
+NA                       0.000 A
+AC Loss                  0.000 A
+Ishare                   0.000 A
+SMBAlert                 0.000 A
+NA                       0.000 A
+Sync_Start               0.000 A
+
+Results:                               Min      Reading    Max                         
+Voltage  V1                            ********  53.4993  ********   V                                           
+Voltage  12Vsb                         ********  12.0500  ********   V                                           
+Voltage  Ishare                        ********   1.7595  ********   V                                           
+Voltage  NA                            ********   0.0000  ********   V                                           
+Voltage  AC Loss                       ********   3.0043  ********   V                                           
+Voltage  Ishare                        ********   3.2005  ********   V                                           
+Voltage  SMBAlert                      ********   3.2313  ********   V                                           
+Voltage  NA                            ********   2.1745  ********   V                                           
+Voltage  Sync_Start                    ********   3.2900  ********   V                                           
+CS Volt  V1                            ********   0.0000  ********   V    
+CS Volt  12Vsb                         ********   0.0000  ********   V    
+CS Volt  Ishare                        ********   0.0000  ********   V    
+CS Volt  NA                            ********   0.0000  ********   V    
+CS Volt  AC Loss                       ********   0.0000  ********   V    
+CS Volt  Ishare                        ********   0.0000  ********   V    
+CS Volt  SMBAlert                      ********   0.0000  ********   V    
+CS Volt  NA                            ********   0.0000  ********   V    
+CS Volt  Sync_Start                    ********   0.0000  ********   V    
+Current  V1                            ********  177.481  ********   A
+Current  12Vsb                         ********    0.487  ********   A
+Current  Ishare                        ********    0.000  ********   A
+Current  NA                            ********    0.000  ********   A
+Current  AC Loss                       ********    0.000  ********   A
+Current  Ishare                        ********    0.000  ********   A
+Current  SMBAlert                      ********    0.000  ********   A
+Current  NA                            ********    0.000  ********   A
+Current  Sync_Start                    ********    0.000  ********   A
+Current PSU1-Vout1                     ********   89.250  ********   A 
+Current PSU1-Vout2                     ********  999.000  ********   A
+Current PSU1-Vout3                     ********  999.000  ********   A
+Current PSU2-Vout1                     ********   88.375  ********   A 
+Current PSU2-Vout2                     ********  999.000  ********   A
+Current PSU2-Vout3                     ********  999.000  ********   A
+PSU1 Vout1 VS PSU1 and PSU2 Vout1        -5.000    0.493    5.000   %
+PSU1 Vout2 VS PSU1 and PSU2 Vout2      ********  999.000 ********   %
+PSU1 Vout3 VS PSU1 and PSU2 Vout3      ********  999.000 ********   %
+PSU2 Vout1 VS PSU1 and PSU2 Vout1        -5.000    0.493    5.000   %
+PSU2 Vout2 VS PSU1 and PSU2 Vout2      ********  999.000  ********   %
+PSU2 Vout3 VS PSU1 and PSU2 Vout3      ********  999.000  ********   % 
+    
+PSU1 Readback Current-Vout1(Hex string) EACA                                 
+PSU1 Readback Current-Vout2(Hex string) 0                                     
+PSU1 Readback Current-Vout3(Hex string) 0                                     
+PSU2 Readback Current-Vout1(Hex string) EAC3                                
+PSU2 Readback Current-Vout2(Hex string) 0                                    
+PSU2 Readback Current-Vout3(Hex string) 0              
+========================================================================================================================================================================================================
+STEP.79(UUT Test seq.79) : HDC Static Current Share for I2C(2.15 Current Sharing Test@20%Ld HL by internal PMBUS reading) ---- (1'312) -------------- PASS
+Step:   82              
+
+Conditions:
+Output
+V1                      71.000 A
+12Vsb                    0.200 A
+Ishare                   0.000 A
+NA                       0.000 A
+AC Loss                  0.000 A
+Ishare                   0.000 A
+SMBAlert                 0.000 A
+NA                       0.000 A
+Sync_Start               0.000 A
+
+Results:                               Min      Reading    Max                         
+Voltage  V1                            ********  54.0469  ********   V                                           
+Voltage  12Vsb                         ********  12.1062  ********   V                                           
+Voltage  Ishare                        ********   0.6957  ********   V                                           
+Voltage  NA                            ********   0.0000  ********   V                                           
+Voltage  AC Loss                       ********   3.0320  ********   V                                           
+Voltage  Ishare                        ********   3.2000  ********   V                                           
+Voltage  SMBAlert                      ********   3.2392  ********   V                                           
+Voltage  NA                            ********   2.2000  ********   V                                           
+Voltage  Sync_Start                    ********   3.2922  ********   V                                           
+CS Volt  V1                            ********   0.0000  ********   V    
+CS Volt  12Vsb                         ********   0.0000  ********   V    
+CS Volt  Ishare                        ********   0.0000  ********   V    
+CS Volt  NA                            ********   0.0000  ********   V    
+CS Volt  AC Loss                       ********   0.0000  ********   V    
+CS Volt  Ishare                        ********   0.0000  ********   V    
+CS Volt  SMBAlert                      ********   0.0000  ********   V    
+CS Volt  NA                            ********   0.0000  ********   V    
+CS Volt  Sync_Start                    ********   0.0000  ********   V    
+Current  V1                            ********   70.981  ********   A
+Current  12Vsb                         ********    0.188  ********   A
+Current  Ishare                        ********    0.000  ********   A
+Current  NA                            ********    0.000  ********   A
+Current  AC Loss                       ********    0.000  ********   A
+Current  Ishare                        ********    0.000  ********   A
+Current  SMBAlert                      ********    0.000  ********   A
+Current  NA                            ********    0.000  ********   A
+Current  Sync_Start                    ********    0.000  ********   A
+Current PSU1-Vout1                     ********   36.313  ********   A 
+Current PSU1-Vout2                     ********  999.000  ********   A
+Current PSU1-Vout3                     ********  999.000  ********   A
+Current PSU2-Vout1                     ********   35.188  ********   A 
+Current PSU2-Vout2                     ********  999.000  ********   A
+Current PSU2-Vout3                     ********  999.000  ********   A
+PSU1 Vout1 VS PSU1 and PSU2 Vout1       -10.000    1.573   10.000   %
+PSU1 Vout2 VS PSU1 and PSU2 Vout2      ********  999.000 ********   %
+PSU1 Vout3 VS PSU1 and PSU2 Vout3      ********  999.000 ********   %
+PSU2 Vout1 VS PSU1 and PSU2 Vout1       -10.000    1.573   10.000   %
+PSU2 Vout2 VS PSU1 and PSU2 Vout2      ********  999.000  ********   %
+PSU2 Vout3 VS PSU1 and PSU2 Vout3      ********  999.000  ********   % 
+    
+PSU1 Readback Current-Vout1(Hex string) E245                                 
+PSU1 Readback Current-Vout2(Hex string) 0                                     
+PSU1 Readback Current-Vout3(Hex string) 0                                     
+PSU2 Readback Current-Vout1(Hex string) E233                                
+PSU2 Readback Current-Vout2(Hex string) 0                                    
+PSU2 Readback Current-Vout3(Hex string) 0              
+========================================================================================================================================================================================================
+STEP.80(UUT Test seq.80) : HDC Relay setting with I2C Relay for PR4(set V1 remove sense connected to V1) ---- (0'110) ------------------------------- PASS
+Step:   80       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   1F        
+FR Relay setting 2:   1F       
+Delay Time:        100 
+
+I2C Relay2 setting 1: 0120              
+I2C Relay2 setting 2: 0120             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0F00                    
+I2C Relay3 setting 2: 0F00                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: 0000                                                          
+I2C Relay3 Read 1: 0000                                        
+I2C Relay3 Write 2: 0000                                                          
+I2C Relay3 Read 2: 0000                  
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.81(UUT Test seq.81) : Static Test.(AC off) ---- (5'437) ---------------------------------------------------------------------------------------- PASS
+Step:   81 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.005   ********   VDC     
+ AC Loss                          ********       0.007   ********   VDC     
+ Ishare                           ********       3.195   ********   VDC     
+ SMBAlert                         ********       3.237   ********   VDC     
+ NA                               ********       2.207   ********   VDC     
+ Sync_Start                       ********       0.009   ********   VDC     
+ V1                               ********       0.000   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.82(UUT Test seq.82) : Static Test.(Set  240Vac 100%HL) ---- (1'453) ---------------------------------------------------------------------------- PASS
+Step:   82 
+
+Settings:
+Input:     240.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********      52.973   ********   VDC     
+ 12Vsb                            ********      11.967   ********   VDC     
+ Ishare                           ********       3.533   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       2.977   ********   VDC     
+ Ishare                           ********       3.202   ********   VDC     
+ SMBAlert                         ********       3.227   ********   VDC     
+ NA                               ********       2.155   ********   VDC     
+ Sync_Start                       ********       3.290   ********   VDC     
+ V1                               ********     354.980   ********   VDC
+ 12Vsb                            ********       0.987   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.83(UUT Test seq.83) : HDC DSO Setup with I2C Relay(Setup for UUT2 Plug out) ---- (9'500) ------------------------------------------------------- PASS
+Step:     86      
+
+DSO Set up 
+========================================================================================================================================================================================================
+STEP.84(UUT Test seq.84) : Delay (ms)(Delay 2s) ---- (2'000) ---------------------------------------------------------------------------------------- PASS
+Step:  84 
+
+Delay     2000  ms
+========================================================================================================================================================================================================
+STEP.85(UUT Test seq.85) : HDC Relay setting with I2C Relay for PR4(Remove UUT2) ---- (2'078) ------------------------------------------------------- PASS
+Step:   85       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   1F        
+FR Relay setting 2:   1F       
+Delay Time:        100 
+
+I2C Relay2 setting 1: 0120              
+I2C Relay2 setting 2: 0120             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0F00                    
+I2C Relay3 setting 2: 0300                  
+Delay Time:       1000  
+
+I2C Relay2 Write 1: .sa42d06dfeddfp                         
+I2C Relay2 Read 1: >f8wdfwfe
+            
+I2C Relay2 Write 2: .sa42d06dfeddfp                         
+I2C Relay2 Read 2:   >f8wdfwfe
+                
+
+I2C Relay3 Write 1: .sa44d06df0dffp                                               
+I2C Relay3 Read 1: >f8wffwf0
+                                  
+I2C Relay3 Write 2: .sa44d06dfcdffp                                               
+I2C Relay3 Read 2: >f8wffwfc
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.86(UUT Test seq.86) : DES DSO single Measurement(2.11 Check Overshoot@UUT2 Plug out) ---- (4'079) ---------------------------------------------- PASS
+Step:  86 
+
+Measurement Type:   4 
+
+Reading
+
+  Min        Value      Max
+   50.980     53.680     54.030   
+========================================================================================================================================================================================================
+STEP.87(UUT Test seq.87) : DES DSO single Measurement(2.11 Check Undershoot@UUT2 Plug out) ---- (4'047) --------------------------------------------- PASS
+Step:  87 
+
+Measurement Type:   5 
+
+Reading
+
+  Min        Value      Max
+   50.980     52.120     54.030   
+========================================================================================================================================================================================================
+STEP.88(UUT Test seq.88) : HDC DSO Setup with I2C Relay(Setup for UUT2 Plug in) ---- (9'375) -------------------------------------------------------- PASS
+Step:     91      
+
+DSO Set up 
+========================================================================================================================================================================================================
+STEP.89(UUT Test seq.89) : Delay (ms)(Delay 2s) ---- (2'000) ---------------------------------------------------------------------------------------- PASS
+Step:  89 
+
+Delay     2000  ms
+========================================================================================================================================================================================================
+STEP.90(UUT Test seq.90) : HDC Relay setting with I2C Relay for PR4(Insert UUT2) ---- (0'546) ------------------------------------------------------- PASS
+Step:   90       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   1F        
+FR Relay setting 2:   1F       
+Delay Time:        100 
+
+I2C Relay2 setting 1: 0120              
+I2C Relay2 setting 2: 0120             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0F00                    
+I2C Relay3 setting 2: 0F00                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: .sa44d06df0dffp                                               
+I2C Relay3 Read 1: >f8wffwf0
+                                  
+I2C Relay3 Write 2: .sa44d06df0dffp                                               
+I2C Relay3 Read 2: >f8wffwf0
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.91(UUT Test seq.91) : Delay (ms)(Delay 2s) ---- (2'000) ---------------------------------------------------------------------------------------- PASS
+Step:  91 
+
+Delay     2000  ms
+========================================================================================================================================================================================================
+STEP.92(UUT Test seq.92) : DES DSO single Measurement(2.11 Check Overshoot@UUT2 Plug In) ---- (4'094) ----------------------------------------------- PASS
+Step:  92 
+
+Measurement Type:   4 
+
+Reading
+
+  Min        Value      Max
+   50.980     53.640     54.030   
+========================================================================================================================================================================================================
+STEP.93(UUT Test seq.93) : DES DSO single Measurement(2.11 Check Undershoot@UUT2 Plug In) ---- (4'031) ---------------------------------------------- PASS
+Step:  93 
+
+Measurement Type:   5 
+
+Reading
+
+  Min        Value      Max
+   50.980     52.160     54.030   
+========================================================================================================================================================================================================
+STEP.94(UUT Test seq.94) : DES UUT Communication(Unlock@UUT1) ---- (0'015) -------------------------------------------------------------------------- PASS
+Step:    94  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0db0d51d55dc7p                                             
+Number of characters to check:  12 
+Start position of string to check:   7 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    7  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         C7             
+========================================================================================================================================================================================================
+STEP.95(UUT Test seq.95) : DES UUT Communication(Unlock@UUT2) ---- (0'016) -------------------------------------------------------------------------- PASS
+Step:    95  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sabedb0d51d55d03p                                             
+Number of characters to check:  12 
+Start position of string to check:   7 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    7  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:         03             
+========================================================================================================================================================================================================
+STEP.96(UUT Test seq.96) : DES UUT Communication(Send Black_Box_Clear@UUT1) ---- (0'015) ------------------------------------------------------------ PASS
+Step:    96  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0dcdd02d03d55p                                             
+Number of characters to check:  12 
+Start position of string to check:   7 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    7  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+========================================================================================================================================================================================================
+STEP.97(UUT Test seq.97) : DES UUT Communication(Send Black_Box_Clear@UUT2) ---- (0'016) ------------------------------------------------------------ PASS
+Step:    97  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sabedcdd02d03d55p                                             
+Number of characters to check:  12 
+Start position of string to check:   7 
+Mask Hexstring: FFFFFFFFFFFFFFFFFFFF000000000000000000000000000000  
+Lenght of response data:    7  
+
+
+Results:   
+HexReading Expected :                                                                                  
+HexReading Response : 0                                                      
+
+            should       read
+Checksum:                        
+========================================================================================================================================================================================================
+STEP.98(UUT Test seq.98) : HDC Relay setting with I2C Relay for PR4(Remove UUT2) ---- (2'078) ------------------------------------------------------- PASS
+Step:   98       
+
+TTL/GP Relay setting 1: 0000        
+TTL/GP Relay setting 2: 0000       
+Delay Time:          0             
+
+FR Relay setting 1:   1F        
+FR Relay setting 2:   1F       
+Delay Time:        100 
+
+I2C Relay2 setting 1: 0120              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0F00                    
+I2C Relay3 setting 2: 0300                  
+Delay Time:       1000  
+
+I2C Relay2 Write 1: .sa42d06dfeddfp                         
+I2C Relay2 Read 1: >f8wdfwfe
+            
+I2C Relay2 Write 2: .sa42d06dfedffp                         
+I2C Relay2 Read 2:   >f8wffwfe
+                
+
+I2C Relay3 Write 1: .sa44d06df0dffp                                               
+I2C Relay3 Read 1: >f8wffwf0
+                                  
+I2C Relay3 Write 2: .sa44d06dfcdffp                                               
+I2C Relay3 Read 2: >f8wffwfc
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
+STEP.99(UUT Test seq.99) : DES UUT Communication(6.5 READ STATUS_Word 0x79 P0@Fail Go To Test) ---- (0'016) ----------------------------------------- PASS
+Step:    99  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d79sab1rrlp                                               
+Number of characters to check:   6 
+Start position of string to check:   7 
+Mask Hexstring:                                               0000  
+Lenght of response data:   13  
+
+
+Results:   
+HexReading Expected : 0000                                                                             
+HexReading Response : 200A                                                   
+
+            should       read
+Checksum:         B6          B6 
+========================================================================================================================================================================================================
+STEP.100(UUT Test seq.100) : DES UUT Communication(6.5 READ STATUS_VOUT 0x7A P0@Fail Go To Test) ---- (0'015) --------------------------------------- PASS
+Step:   100  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7asab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 00  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : 00                                                                               
+HexReading Response : 00                                                     
+
+            should       read
+Checksum:         22          22 
+========================================================================================================================================================================================================
+STEP.101(UUT Test seq.101) : DES UUT Communication(6.5 READ STATUS_IOUT 0x7B P0@Fail Go To Test) ---- (0'000) --------------------------------------- PASS
+Step:   101  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7bsab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 00  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : 00                                                                               
+HexReading Response : 00                                                     
+
+            should       read
+Checksum:         49          49 
+========================================================================================================================================================================================================
+STEP.102(UUT Test seq.102) : DES UUT Communication(6.5 READ STATUS_Input 0x7C P0@Fail Go To Test) ---- (0'015) -------------------------------------- PASS
+Step:   102  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7csab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 00  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : 00                                                                               
+HexReading Response : F8                                                     
+
+            should       read
+Checksum:         B9          B9 
+========================================================================================================================================================================================================
+STEP.103(UUT Test seq.103) : DES UUT Communication(6.5 STATUS_TEMPERATURE 0x7D P0@Fail Go To Test) ---- (0'016) ------------------------------------- PASS
+Step:   103  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7dsab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 00  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : 00                                                                               
+HexReading Response : 00                                                     
+
+            should       read
+Checksum:         34          34 
+========================================================================================================================================================================================================
+STEP.104(UUT Test seq.104) : DES UUT Communication(6.5 STATUS_CML  0x7E P0@Fail Go To Test) ---- (0'015) -------------------------------------------- PASS
+Step:   104  
+     
+Conditions:
+RS232 device number:  1 
+Send datastring: .sab0d7esab1rlp                                                
+Number of characters to check:   3 
+Start position of string to check:   7 
+Mask Hexstring:                                                 00  
+Lenght of response data:   10  
+
+
+Results:   
+HexReading Expected : 00                                                                               
+HexReading Response : C0                                                     
+
+            should       read
+Checksum:         C7          C7 
+========================================================================================================================================================================================================
+STEP.105(UUT Test seq.105) : Static Test.(AC OFF) ---- (0'938) -------------------------------------------------------------------------------------- PASS
+Step:  105 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                  355.00  ADC 
+Output :  12Vsb                                 1.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  AC Loss                               0.00  ADC 
+Output :  Ishare                                0.00  ADC 
+Output :  SMBAlert                              0.00  ADC 
+Output :  NA                                    0.00  ADC 
+Output :  Sync_Start                            0.00  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12Vsb                            ********       0.000   ********   VDC     
+ Ishare                           ********       0.022   ********   VDC     
+ NA                               ********       0.000   ********   VDC     
+ AC Loss                          ********       0.007   ********   VDC     
+ Ishare                           ********       3.195   ********   VDC     
+ SMBAlert                         ********       3.240   ********   VDC     
+ NA                               ********       2.210   ********   VDC     
+ Sync_Start                       ********       0.014   ********   VDC     
+ V1                               ********       0.025   ********   VDC
+ 12Vsb                            ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ AC Loss                          ********       0.000   ********   VDC
+ Ishare                           ********       0.000   ********   VDC
+ SMBAlert                         ********       0.000   ********   VDC
+ NA                               ********       0.000   ********   VDC
+ Sync_Start                       ********       0.000   ********   VDC
+========================================================================================================================================================================================================
+STEP.106(UUT Test seq.106) : HDC Relay setting with I2C Relay for PR4(Remove UUT1&UUT2) ---- (0'547) ------------------------------------------------ PASS
+Step:  106       
+
+TTL/GP Relay setting 1: 0100        
+TTL/GP Relay setting 2: 0100       
+Delay Time:          0             
+
+FR Relay setting 1:   17        
+FR Relay setting 2:   17       
+Delay Time:        100 
+
+I2C Relay2 setting 1: 0100              
+I2C Relay2 setting 2: 0100             
+Delay Time:        100      
+
+I2C Relay3 setting 1: 0000                    
+I2C Relay3 setting 2: 0000                  
+Delay Time:          0  
+
+I2C Relay2 Write 1: 0000                                    
+I2C Relay2 Read 1: 0000                  
+I2C Relay2 Write 2: 0000                                    
+I2C Relay2 Read 2:   0000                      
+
+I2C Relay3 Write 1: .sa44d06dffdffp                                               
+I2C Relay3 Read 1: >f8wffwff
+                                  
+I2C Relay3 Write 2: .sa44d06dffdffp                                               
+I2C Relay3 Read 2: >f8wffwff
+            
+
+I2C Relay4 Write 1£º 0000                   
+I2C Relay4 Read 1:  0000                   
+I2C Relay4 Write 2:  0000                 
+I2C Relay4 Read 2:  0000                                                                   
+
+                                                 
+========================================================================================================================================================================================================
