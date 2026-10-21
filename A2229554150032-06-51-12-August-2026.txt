@@ -1,0 +1,104 @@
+Delta Energy Systems (Thailand) PCL.
+
+Testprogram : ECD18010040-B-MANUAL TEST                                     
+
+   
+Serial No   : A2229554150032                               
+Model Name  : ECD18010040-B          
+Operator    : root                   
+Date Process: 2026/08/12 06:51:01 AM           
+Test Time   : 00:00:20              
+Testresult  : PASS  
+
+================================================================================
+(Pre Test seq.1) : Load PreSetup ---- (0'047)
+Step:   1 
+
+DC Load Set up
+================================================================================
+STEP.1(UUT Test seq.1) : C61512 Setup UUT(Set AC Coupling) ---- (0'015) --- PASS
+AC/DC Coupling Setting
+
+
+================================================================================
+STEP.2(UUT Test seq.2) : HDC Relay setting with Keysight new(all relay off  PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.3(UUT Test seq.3) : Static Test.(180V) ---- (1'344) ------------------ PASS
+Step:    3 
+
+Settings:
+Input:     180.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                    2.00  ADC 
+Output :  12VSB                                 0.50  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12VSB                            ********       0.000   ********   VDC     
+ V1                               ********       0.000   ********   VDC
+ 12VSB                            ********       0.000   ********   VDC
+================================================================================
+STEP.4(UUT Test seq.4) : Delay (ms)(10S) ---- (10'000) -------------------- PASS
+Step:   4 
+
+Delay    10000  ms
+================================================================================
+STEP.5(UUT Test seq.5) : HDC Relay setting with Keysight new(PSKILL LOW) -- PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.6(UUT Test seq.6) : Delay (ms)(2S) ---- (2'015) ---------------------- PASS
+Step:   6 
+
+Delay     2000  ms
+================================================================================
+STEP.7(UUT Test seq.7) : Static Test.(TURN ON ) ---- (2'219) -------------- PASS
+Step:    7 
+
+Settings:
+Input:     180.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                    2.00  ADC 
+Output :  12VSB                                 0.50  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 50.000      54.035     56.000   VDC     
+ 12VSB                              11.000      12.111     13.000   VDC     
+ V1                               ********       1.995   ********   VDC
+ 12VSB                            ********       0.493   ********   VDC
+================================================================================
+STEP.8(UUT Test seq.8) : Static Test.(AC OFF) ---- (2'313) ---------------- PASS
+Step:    8 
+
+Settings:
+Input:       0.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                    2.00  ADC 
+Output :  12VSB                                 0.50  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12VSB                            ********       0.000   ********   VDC     
+ V1                               ********       0.007   ********   VDC
+ 12VSB                            ********       0.000   ********   VDC
+================================================================================
+STEP.9(UUT Test seq.9) : C61512 Setup UUT(Set AC Coupling) ---- (0'063) --- PASS
+AC/DC Coupling Setting
+
+
+================================================================================
+STEP.10(UUT Test seq.10) : HDC Relay setting with Keysight new(all relay of PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================

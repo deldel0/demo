@@ -1,0 +1,77 @@
+Delta Energy Systems (Thailand) PCL.
+
+Testprogram : ECD18010040-B-MANUAL TEST                                     
+
+   
+Serial No   : A2229554150024                               
+Model Name  : ECD18010040-B          
+Operator    : root                   
+Date Process: 2026/08/13 11:12:00 PM           
+Test Time   : 00:00:27              
+Testresult  : FAIL  
+
+================================================================================
+(Pre Test seq.1) : Load PreSetup ---- (0'047)
+Step:   1 
+
+DC Load Set up
+================================================================================
+STEP.1(UUT Test seq.1) : C61512 Setup UUT(Set AC Coupling) ---- (0'016) --- PASS
+AC/DC Coupling Setting
+
+
+================================================================================
+STEP.2(UUT Test seq.2) : HDC Relay setting with Keysight new(all relay off  PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.3(UUT Test seq.3) : Static Test.(180V) ---- (1'359) ------------------ PASS
+Step:    3 
+
+Settings:
+Input:     180.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                    2.00  ADC 
+Output :  12VSB                                 0.50  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                               ********       0.000   ********   VDC     
+ 12VSB                            ********       0.000   ********   VDC     
+ V1                               ********       0.000   ********   VDC
+ 12VSB                            ********       0.000   ********   VDC
+================================================================================
+STEP.4(UUT Test seq.4) : Delay (ms)(10S) ---- (10'015) -------------------- PASS
+Step:   4 
+
+Delay    10000  ms
+================================================================================
+STEP.5(UUT Test seq.5) : HDC Relay setting with Keysight new(PSKILL LOW) -- PASS
+(The Report Format of this Sequence was not found)
+
+================================================================================
+STEP.6(UUT Test seq.6) : Delay (ms)(2S) ---- (2'000) ---------------------- PASS
+Step:   6 
+
+Delay     2000  ms
+================================================================================
+STEP.7(UUT Test seq.7) : Static Test.(TURN ON ) ---- (10'688) ------------- FAIL
+Step:    7 
+
+Settings:
+Input:     180.000 V  50 HZ 
+
+Remark:if HZ was "0",Means DC input
+
+Output :  V1                                    2.00  ADC 
+Output :  12VSB                                 0.50  ADC 
+
+Results:
+Output                               Min      Reading      Max     Units
+ V1                                 50.000       0.000     56.000   VDC     
+ 12VSB                              11.000       0.000     13.000   VDC     
+ V1                               ********       0.001   ********   VDC
+ 12VSB                            ********       0.000   ********   VDC
+================================================================================
